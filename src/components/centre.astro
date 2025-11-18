@@ -1,0 +1,78 @@
+---
+import Roulette from "./roulette";
+---
+
+<style>
+  @font-face {
+    font-family: font;
+    src: url("/font.woff2");
+  }
+  main {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    mix-blend-mode: difference;
+    filter: saturate(120%);
+  }
+  .the-middle {
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+  }
+  h1 {
+    font-family: font;
+    font-size: 200px;
+    margin: -30px;
+    padding: 0;
+    color: #e4c782;
+    filter: url(#goof);
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    /* text-align: left; */
+  }
+</style>
+
+<main>
+  <div class="the-middle">
+    <h1>Amber</h1></br>
+  <h1>Zeng</h1>
+  <Roulette client:load />
+</div>
+</main>
+
+<svg style="position:absolute;" version="1.1" height="0" width="0">
+  <defs>
+    <filter id="goof">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"
+      ></feGaussianBlur>
+      <feColorMatrix
+        in="blur"
+        mode="matrix"
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 3 -1"
+        result="goof2"></feColorMatrix>
+      <feComposite in="SourceGraphic" in2="goof2" operator="atop"></feComposite>
+      <!-- <feTurbulence
+          id="turbulence"
+          type="fractalNoise"
+          baseFrequency="0.1"
+          numOctaves="8"
+          seed="1"
+          result="turbulence"></feTurbulence>
+        <feDisplacementMap
+          id="displacement"
+          in2="turbulence"
+          in="goof2"
+          scale="1"
+          xChannelSelector="R"
+          yChannelSelector="B"></feDisplacementMap> -->
+    </filter>
+  </defs>
+</svg>

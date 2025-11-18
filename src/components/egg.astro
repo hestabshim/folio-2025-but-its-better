@@ -1,0 +1,19 @@
+---
+import Lol from "./lol.astro";
+---
+<Lol />
+<model-viewer 
+  loading="eager"
+  className="egg"
+  src="Egg.glb"
+  interaction-prompt="none"
+  scale="1 1 1"
+  disable-tap
+  disable-pan
+  disable-zoom
+  auto-rotate
+  auto-rotate-delay={1}
+  rotation-per-second="30deg"
+  exposure={0.9}
+  camera-target="auto auto auto"
+  orientation="20deg 20deg 20deg"/>

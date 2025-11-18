@@ -1,0 +1,17 @@
+---
+import Lol from "./lol.astro";
+---
+<Lol />
+<model-viewer 
+loading="lazy"
+className="fish"
+src="Fish.glb"
+auto-rotate
+auto-rotate-delay={2}
+rotation-per-second="30deg"
+scale="2.5 2.5 2.5"
+field-of-view="28deg"
+disable-tap
+disable-zoom
+orientation="0deg 0deg 270deg"
+/>
