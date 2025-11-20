@@ -5,7 +5,7 @@ function Roulette() {
 
   const Generate = () => {
     const r_text = [
-      "likes honeycrisp apples.",
+      "enjoys blackberries and cheese.",
       "gets 25% sugar in her boba.",
       "creates digital collages in Photoshop.",
       "would like to own two cats one day.",

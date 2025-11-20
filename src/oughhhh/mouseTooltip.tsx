@@ -15,8 +15,8 @@ const MouseTooltip = ({content, children}: tooltipProps)=> {
         const viewportHeight = window.innerHeight;
       
         //+12 is added to give a spice between cursor and tooltip
-        let tooltipX = clientX;
-        let tooltipY = clientY;
+        let tooltipX = clientX-100;
+        let tooltipY = clientY-100;
       
         // Check if tooltip exceeds the right side of the viewport
         if (tooltipX + tooltipWidth > viewportWidth) {
@@ -57,22 +57,6 @@ const MouseTooltip = ({content, children}: tooltipProps)=> {
       {isTooltipVisible && (
         <div
           ref={tooltipRef}
-          style={{
-            transform: `translate(${tooltipPosition.x}px, ${tooltipPosition.y - 50}px)`,
-            transformOrigin: 'center bottom',
-            color: "black", 
-            borderRadius:"30px",
-            padding: "10px",
-            height: "auto",
-            width: "fit-content",
-            background: "pink",
-            filter: "saturate(2)",
-            mixBlendMode: "difference",
-            position: "absolute",
-            // top: tooltipPosition.y,
-            // left: tooltipPosition.x,
-            zIndex: '200'
-          }}
         >
           {content}
         </div>

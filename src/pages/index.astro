@@ -7,6 +7,9 @@ import Gradient from "../components/gradient.astro";
 import MouseTooltip from "../function/mouseTooltip";
 import Centre from "../components/centre.astro";
 ---
+<head>
+  <link rel="icon" href="/egg.gif">
+</head>
 <main>
 <Gradient/>
 <MouseTooltip client:load content="about">
@@ -19,7 +22,7 @@ import Centre from "../components/centre.astro";
       client:load
       width={2000}
       height={900}
-      colors={["#FFB833", "#D65108", "#861D26"]}
+      colors={["#FFB833", "#f77f07", "#f75307"]}
       colorBack="#F5E8E0"
       softness={1}
       intensity={0.5}
